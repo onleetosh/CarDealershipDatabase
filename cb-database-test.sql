@@ -4,11 +4,9 @@ USE CarDealership;
 
 	SELECT * FROM Dealerships;
 
-
 -- query to get all data from vehicles table --
 
 	SELECT * FROM Vehicles;
-
 
 -- query to find a car by vin number --
 
