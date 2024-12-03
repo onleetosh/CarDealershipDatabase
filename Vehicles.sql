@@ -1,6 +1,6 @@
 USE CarDealership;
 
-CREATE  Vehicles ( 
+CREATE TABLE Vehicles ( 
 	Vin int primary key, 
 	Year int not null,
 	Make varchar(50) not null, 
