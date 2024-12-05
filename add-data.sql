@@ -1,0 +1,161 @@
+USE CarDealerships;
+
+-- insert into 
+-- 		Dealership (DealershipID, DealershipName, Address, PhoneNumber)
+-- values
+--     (1, 'Straw Hat Motors', 'Sunny Avenue, East Blue', '123-456-7890'),
+--     (2, 'Red-Haired Autos', 'Shanks Street, West Blue', '234-567-8901'),
+--     (3, 'Mugiwara Dealership', 'Grand Line, Loguetown', '345-678-9012'),
+--     (4, 'Blackbeard Cars', 'Jaya Road, Mock Town', '456-789-0123'),
+--     (5, 'Marine HQ Motors', 'Fleet Admiral Blvd, Marineford', '567-890-1234'),
+--     (6, 'Big Mom Vehicles', 'Whole Cake Island, Totto Land', '678-901-2345'),
+--     (7, 'Kaidos Rides', 'Onigashima Heights, Wano', '789-012-3456'),
+--     (8, 'Doflamingo Auto Hub', 'Dressrosa Plaza, New World', '890-123-4567'),
+--     (9, 'Laws Auto Clinic', 'Heart Street, Punk Hazard', '901-234-5678'),
+--     (10, 'Zoro Motors', 'Santoryu Lane, Shimotsuki Village', '012-345-6789');
+
+
+
+-- INSERT INTO 
+--     Vehicle (Vin, Year, Make, Model, VehicleType, Color, Odometer, Price, Sold, DealershipID)
+-- VALUES
+--     ('1282630', 2020, 'Honda', 'Accord', 'Sedan', 'Black', 25000, 20000, 1, 1), -- Straw Hat Motors
+--     ('2827359', 2021, 'Toyota', 'Corolla', 'Sedan', 'White', 22000, 19000, 0, 2), -- Red-Haired Autos
+--     ('1288721', 2019, 'Ford', 'Focus', 'Hatchback', 'Blue', 20000, 17000, 1, 3), -- Mugiwara Dealership
+--     ('1182328', 2021, 'Jeep', 'Grand Cherokee', 'SUV', 'Gray', 35000, 33000, 1, 4), -- Blackbeard Cars
+--     ('3009289', 2022, 'Honda', 'CR-V', 'SUV', 'Silver', 30000, 31000, 0, 5), -- Marine HQ Motors
+--     ('2165833', 2020, 'Honda', 'HR-V', 'SUV', 'Red', 28000, 27000, 0, 6), -- Big Mom Vehicles
+--     ('1025437', 2023, 'Cadillac', 'Escalade', 'SUV', 'Black', 75000, 78000, 1, 7), -- Kaido's Rides
+--     ('5578925', 2021, 'Hyundai', 'Sonata', 'Sedan', 'Blue', 24000, 22000, 0, 8), -- Doflamingo Auto Hub
+--     ('3642573', 2018, 'Ford', 'Fusion', 'Sedan', 'Gray', 18000, 16000, 0, 9), -- Law's Auto Clinic
+--     ('1762925', 2021, 'Nissan', 'Altima', 'Sedan', 'Black', 23000, 21000, 1, 10), -- Zoro Motors
+--     ('3009385', 2020, 'Volkswagen', 'Jetta', 'Sedan', 'Silver', 22000, 20000, 1, 1), -- Straw Hat Motors
+--     ('5231125', 2023, 'Tesla', 'Model 3', 'Sedan', 'White', 40000, 45000, 0, 2), -- Red-Haired Autos
+--     ('1120349', 2022, 'Ford', 'F-150', 'Truck', 'Black', 45000, 47000, 0, 3), -- Mugiwara Dealership
+--     ('1629981', 2019, 'Ford', 'Explorer', 'SUV', 'Blue', 34000, 32000, 0, 4), -- Blackbeard Cars
+--     ('1983749', 2022, 'Honda', 'Civic', 'Sedan', 'Gray', 22000, 23000, 1, 5), -- Marine HQ Motors
+--     ('2234320', 2023, 'Toyota', 'RAV4', 'SUV', 'White', 31000, 32000, 0, 6), -- Big Mom Vehicles
+--     ('1988739', 2020, 'Ford', 'Escape', 'SUV', 'Silver', 29000, 28000, 0, 7), -- Kaido's Rides
+--     ('4112349', 2021, 'Toyota', 'Camry', 'Sedan', 'Blue', 27000, 26000, 1, 8), -- Doflamingo Auto Hub
+--     ('5872301', 2023, 'Kia', 'Sorento', 'SUV', 'Red', 35000, 36000, 0, 9), -- Law's Auto Clinic
+--     ('1111933', 2022, 'Chevrolet', 'Malibu', 'Sedan', 'Black', 25000, 24000, 1, 10), -- Zoro Motors
+--     ('5567809', 2021, 'Subaru', 'Outback', 'SUV', 'Green', 29000, 28000, 0, 1), -- Straw Hat Motors
+--     ('8891234', 2022, 'Mazda', 'CX-5', 'SUV', 'Red', 31000, 30000, 1, 2), -- Red-Haired Autos
+--     ('3324576', 2020, 'Toyota', 'Tacoma', 'Truck', 'White', 45000, 44000, 0, 3), -- Mugiwara Dealership
+--     ('7801235', 2023, 'BMW', 'X5', 'SUV', 'Black', 35000, 60000, 1, 4), -- Blackbeard Cars
+--     ('9876543', 2021, 'Audi', 'A4', 'Sedan', 'Silver', 25000, 33000, 0, 5), -- Marine HQ Motors
+--     ('6654321', 2020, 'Kia', 'Sportage', 'SUV', 'Blue', 27000, 25000, 0, 6), -- Big Mom Vehicles
+--     ('1122765', 2022, 'Volvo', 'XC90', 'SUV', 'Gray', 32000, 55000, 1, 7), -- Kaido's Rides
+--     ('7789123', 2020, 'Hyundai', 'Tucson', 'SUV', 'Black', 24000, 22000, 0, 8), -- Doflamingo Auto Hub
+--     ('3422987', 2021, 'Dodge', 'Charger', 'Sedan', 'Yellow', 23000, 30000, 0, 9), -- Law's Auto Clinic
+--     ('4432019', 2019, 'Chevrolet', 'Camaro', 'Coupe', 'Red', 19000, 28000, 1, 10), -- Zoro Motors
+--     ('1284657', 2022, 'Nissan', 'Rogue', 'SUV', 'White', 20000, 23000, 1, 1), -- Straw Hat Motors
+--     ('2983645', 2021, 'Honda', 'Pilot', 'SUV', 'Gray', 30000, 32000, 0, 2), -- Red-Haired Autos
+--     ('3781209', 2018, 'Ford', 'Ranger', 'Truck', 'Blue', 48000, 40000, 1, 3), -- Mugiwara Dealership
+--     ('1209876', 2023, 'Toyota', 'Highlander', 'SUV', 'Silver', 27000, 45000, 0, 4), -- Blackbeard Cars
+--     ('7812456', 2020, 'Hyundai', 'Elantra', 'Sedan', 'Black', 22000, 20000, 1, 5), -- Marine HQ Motors
+--     ('6501983', 2021, 'Jeep', 'Wrangler', 'SUV', 'Blue', 34000, 40000, 1, 6), -- Big Mom Vehicles
+--     ('2156789', 2022, 'Chevrolet', 'Traverse', 'SUV', 'White', 29000, 33000, 0, 7), -- Kaido's Rides
+--     ('9901456', 2021, 'Subaru', 'Forester', 'SUV', 'Green', 27000, 25000, 1, 8), -- Doflamingo Auto Hub
+--     ('8124532', 2020, 'Honda', 'Odyssey', 'Minivan', 'Gray', 30000, 28000, 0, 9), -- Law's Auto Clinic
+--     ('4578096', 2019, 'Volkswagen', 'Passat', 'Sedan', 'Black', 25000, 21000, 1, 10); -- Zoro Motors
+
+
+-- INSERT INTO 
+--     Inventory (Vin, DealershipID)
+-- VALUES
+
+--     ('1282630', 1), -- Honda Accord, Straw Hat Motors
+--     ('2827359', 2), -- Toyota Corolla, Red-Haired Autos
+--     ('1288721', 3), -- Ford Focus, Mugiwara Dealership
+--     ('1182328', 4), -- Jeep Grand Cherokee, Blackbeard Cars
+--     ('3009289', 5), -- Honda CR-V, Marine HQ Motors
+--     ('2165833', 6), -- Honda HR-V, Big Mom Vehicles
+--     ('1025437', 7), -- Cadillac Escalade, Kaido's Rides
+--     ('5578925', 8), -- Hyundai Sonata, Doflamingo Auto Hub
+--     ('3642573', 9), -- Ford Fusion, Law's Auto Clinic
+--     ('1762925', 10), -- Nissan Altima, Zoro Motors
+--     ('3009385', 1), -- Volkswagen Jetta, Straw Hat Motors
+--     ('5231125', 2), -- Tesla Model 3, Red-Haired Autos
+--     ('1120349', 3), -- Ford F-150, Mugiwara Dealership
+--     ('1629981', 4), -- Ford Explorer, Blackbeard Cars
+--     ('1983749', 5), -- Honda Civic, Marine HQ Motors
+--     ('2234320', 6), -- Toyota RAV4, Big Mom Vehicles
+--     ('1988739', 7), -- Ford Escape, Kaido's Rides
+--     ('4112349', 8), -- Toyota Camry, Doflamingo Auto Hub
+--     ('5872301', 9), -- Kia Sorento, Law's Auto Clinic
+--     ('1111933', 10), -- Chevrolet Malibu, Zoro Motors
+
+--     ('5567809', 1), -- Subaru Outback, Straw Hat Motors
+--     ('8891234', 2), -- Mazda CX-5, Red-Haired Autos
+--     ('3324576', 3), -- Toyota Tacoma, Mugiwara Dealership
+--     ('7801235', 4), -- BMW X5, Blackbeard Cars
+--     ('9876543', 5), -- Audi A4, Marine HQ Motors
+--     ('6654321', 6), -- Kia Sportage, Big Mom Vehicles
+--     ('1122765', 7), -- Volvo XC90, Kaido's Rides
+--     ('7789123', 8), -- Hyundai Tucson, Doflamingo Auto Hub
+--     ('3422987', 9), -- Dodge Charger, Law's Auto Clinic
+--     ('4432019', 10), -- Chevrolet Camaro, Zoro Motors
+--     ('1284657', 1), -- Nissan Rogue, Straw Hat Motors
+--     ('2983645', 2), -- Honda Pilot, Red-Haired Autos
+--     ('3781209', 3), -- Ford Ranger, Mugiwara Dealership
+--     ('1209876', 4), -- Toyota Highlander, Blackbeard Cars
+--     ('7812456', 5), -- Hyundai Elantra, Marine HQ Motors
+--     ('6501983', 6), -- Jeep Wrangler, Big Mom Vehicles
+--     ('2156789', 7), -- Chevrolet Traverse, Kaido's Rides
+--     ('9901456', 8), -- Subaru Forester, Doflamingo Auto Hub
+--     ('8124532', 9), -- Honda Odyssey, Law's Auto Clinic
+--     ('4578096', 10); -- Volkswagen Passat, Zoro Motors
+
+
+-- INSERT INTO Customer (CustomerID, FirstName, LastName, Phone, Email)
+-- VALUES
+--     (101, 'Luffy', 'Monkey', '123-456-7890', 'luffy.monkey@example.com'), -- Customer for Cadillac Escalade
+--     (102, 'Nami', 'Swan', '123-555-7890', 'nami.swan@example.com'), -- Customer for Chevrolet Malibu
+--     (103, 'Zoro', 'Roronoa', '123-666-7890', 'zoro.roronoa@example.com'), -- Customer for Volvo XC90
+--     (104, 'Sanji', 'Vinsmoke', '123-777-7890', 'sanji.vinsmoke@example.com'), -- Customer for Jeep Grand Cherokee
+--     (105, 'Usopp', 'God', '123-888-7890', 'usopp.god@example.com'), -- Customer for Honda Accord
+--     (106, 'Robin', 'Nico', '123-999-7890', 'robin.nico@example.com'), -- Customer for Nissan Rogue
+--     (107, 'Chopper', 'Tony', '321-456-7890', 'chopper.tony@example.com'), -- Customer for Ford Focus
+--     (108, 'Franky', 'Cyborg', '321-555-7890', 'franky.cyborg@example.com'), -- Customer for Nissan Altima
+--     (109, 'Brook', 'Soulking', '321-666-7890', 'brook.soulking@example.com'), -- Customer for Honda Civic
+--     (110, 'Ace', 'Portgas', '321-777-7890', 'ace.portgas@example.com'), -- Customer for Volkswagen Jetta
+--     (111, 'Sabo', 'Revolutionary', '321-888-7890', 'sabo.revolutionary@example.com'), -- Customer for Ford Ranger
+--     (112, 'Vivi', 'Nefertari', '321-999-7890', 'vivi.nefertari@example.com'), -- Customer for Toyota Camry
+--     (113, 'Shanks', 'Red', '421-123-7890', 'shanks.red@example.com'), -- Customer for Chevrolet Camaro
+--     (114, 'Buggy', 'Clown', '421-234-7890', 'buggy.clown@example.com'), -- Customer for Volkswagen Passat
+--     (115, 'Jinbei', 'Knight', '421-345-7890', 'jinbei.knight@example.com'), -- Customer for Jeep Wrangler
+--     (116, 'Law', 'Trafalgar', '421-456-7890', 'law.trafalgar@example.com'), -- Customer for BMW X5
+--     (117, 'Kid', 'Eustass', '421-567-7890', 'kid.eustass@example.com'), -- Customer for Hyundai Elantra
+--     (118, 'Hancock', 'Boa', '421-678-7890', 'hancock.boa@example.com'), -- Customer for Mazda CX-5
+--     (119, 'Rayleigh', 'Silver', '421-789-7890', 'rayleigh.silver@example.com'); -- Customer for Subaru Forester
+
+
+
+-- INSERT INTO SalesContract 
+--     (SalesID, SalesDate, CustomerID, Vin, DealershipID, SalesContractTaxes, SalesContractRecordingFee, SalesContractProcessingFee, TotalPrice, MonthlyPayment, isFinance)
+-- VALUES
+--     (1, '2023-11-01', 101, '1025437', 7, 3900.00, 100.00, 495.00, 82495.00, 1871.90, true), -- Cadillac Escalade
+--     (2, '2023-11-02', 102, '1111933', 10, 1200.00, 100.00, 495.00, 25795.00, 0.00, false), -- Chevrolet Malibu
+--     (3, '2023-11-03', 103, '1122765', 7, 2750.00, 100.00, 495.00, 58345.00, 0.00, false), -- Volvo XC90
+--     (4, '2023-11-04', 104, '1182328', 4, 1650.00, 100.00, 495.00, 35245.00, 799.75, true), -- Jeep Grand Cherokee
+--     (5, '2023-11-05', 105, '1282630', 1, 1000.00, 100.00, 495.00, 21595.00, 490.01, true), -- Honda Accord
+--     (6, '2023-11-06', 106, '1284657', 1, 1150.00, 100.00, 495.00, 24745.00, 0.00, false), -- Nissan Rogue
+--     (7, '2023-11-07', 107, '1288721', 3, 850.00, 100.00, 495.00, 18445.00, 418.54, true), -- Ford Focus
+--     (8, '2023-11-08', 108, '1762925', 10, 1050.00, 100.00, 495.00, 22645.00, 350.00, false), -- Nissan Altima    
+--     (9, '2023-11-09', 109, '1983749', 5, 1150.00, 100.00, 495.00, 24745.00, 561.49, true); -- Honda Civic
+
+
+-- INSERT INTO LeaseContract 
+-- (LeaseID, LeaseDate, CustomerID, Vin, DealershipID, LeaseContractExpectedFinalValue, LeaseContractLeaseFee, TotalPrice, MonthlyPayment)
+-- VALUES
+-- (1, '2023-11-10', 110, '3009385', 1, 10000.00, 1400.00, 11400.00, 336.57), -- Volkswagen Jetta
+-- (2, '2023-11-11', 111, '3781209', 3, 20000.00, 2800.00, 22800.00, 673.15), -- Ford Ranger
+-- (3, '2023-11-12', 112, '4112349', 8, 13000.00, 1820.00, 14820.00, 437.55), -- Toyota Camry
+-- (4, '2023-11-13', 113, '4432019', 10, 14000.00, 1960.00, 15960.00, 471.20), -- Chevrolet Camaro
+-- (5, '2023-11-14', 114, '4578096', 10, 10500.00, 1470.00, 11970.00, 353.40), -- Volkswagen Passat
+-- (6, '2023-11-15', 115, '6501983', 6, 20000.00, 2800.00, 22800.00, 673.15), -- Jeep Wrangler
+-- (7, '2023-11-16', 116, '7801235', 4, 30000.00, 4200.00, 34200.00, 1009.72), -- BMW X5
+-- (8, '2023-11-17', 117, '7812456', 5, 10000.00, 1400.00, 11400.00, 336.57), -- Hyundai Elantra
+-- (9, '2023-11-18', 118, '8891234', 2, 15000.00, 2100.00, 17100.00, 504.86), -- Mazda CX-5
+-- (10, '2023-11-19', 119, '9901456', 8, 12500.00, 1750.00, 14250.00, 420.72); -- Subaru Forester
